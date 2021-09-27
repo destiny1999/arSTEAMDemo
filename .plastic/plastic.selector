@@ -1,0 +1,4 @@
+repository "ARSTEAM@local"
+  path "/"
+    br "/main"
+    co "/main"
