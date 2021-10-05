@@ -18,12 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/LoadScene.unity
     guid: 5b79c1f6c18fd5147b9c9600db8a4401
   - enabled: 0
-    path: Assets/Mapbox/Examples/0_PrefabScenes/Location-basedGame.unity
-    guid: 42f6aa7ce7a604f16ade319663f46ceb
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: "Assets/GO Map - 3D Map For AR Gaming/Demo/Flat Map - Pok\xE8mon GO Style.unity"
     guid: 331e65508a1194ad58e0fcfb4ca518b4
+  - enabled: 1
+    path: Assets/Scenes/ARFoundationColoring.unity
+    guid: 65b3fd90ed98d264db4968cfec962263
   m_configObjects:
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: ed0ac633026ead24489277cb601951fa, type: 2}
-    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: a72aa257f65d09449b2be5134cac9f1f, type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: c83bd6800548536459708f4729cc101f, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: f03f3b0d2fc59114e9544b1fef20fcea, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 1074acee6d4bc2a4ca02ac10262e1c7b, type: 2}
