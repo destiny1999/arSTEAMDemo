@@ -23,9 +23,12 @@ EditorBuildSettings:
   - enabled: 0
     path: "Assets/GO Map - 3D Map For AR Gaming/Demo/Flat Map - Pok\xE8mon GO Style.unity"
     guid: 331e65508a1194ad58e0fcfb4ca518b4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ARFoundationColoring.unity
     guid: 65b3fd90ed98d264db4968cfec962263
+  - enabled: 1
+    path: Assets/Scenes/ARProjection.unity
+    guid: 2725fdd316b756c4788dfe9098e8acf8
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: c83bd6800548536459708f4729cc101f, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: f03f3b0d2fc59114e9544b1fef20fcea, type: 2}
