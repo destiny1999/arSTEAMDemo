@@ -720,8 +720,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OrderString:
-  - "\u62C9\u8FD1"
-  - "\u62C9\u8FDC"
+  - "\u9760\u8FD1"
+  - "\u8FDC\u79BB"
   - "\u653E\u5927"
   - "\u7F29\u5C0F"
   MainCamera: {fileID: 929202168}
