@@ -13,16 +13,9 @@ public class LoadSceneManager : MonoBehaviour
         nextViewName = ChangeSceneManager.GetNextNviewName();
         StartCoroutine(LoadScene());
     }
-
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
     IEnumerator LoadScene()
     {
-        
-
         AsyncOperation async = null;
         async = SceneManager.LoadSceneAsync(nextViewName);
         async.allowSceneActivation = false;

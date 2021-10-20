@@ -98,8 +98,8 @@ public class CatchBallSetting : MonoBehaviour
         yield return (CatchingAni());
         if (get)
         {
-            MapManager.Instance.ShowCatchScene(false);
-            pet.SetActive(true);
+            ChangeSceneManager.SetNextViewName("goMapLocation");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("LoadScene");
         }
         else
         {

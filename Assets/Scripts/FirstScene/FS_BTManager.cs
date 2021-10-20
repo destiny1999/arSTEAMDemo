@@ -56,13 +56,19 @@ public class FS_BTManager : MonoBehaviour
             request = true;
             yield return 1;
         }
+        while (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
+        {
+            if (!request)
+            {
+                Permission.RequestUserPermission(Permission.Microphone);
+            }
+            request = true;
+            yield return 1;
+        }
     }
 
     IEnumerator RequestIOSPermission()
     {
-
-
-
         bool request = false;
         
         request = false;

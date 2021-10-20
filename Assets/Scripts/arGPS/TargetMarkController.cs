@@ -34,8 +34,8 @@ public class TargetMarkController : MonoBehaviour
         print(collision.transform.name);
         if (collision.transform.tag.Equals("Player"))
         {
-            MapManager.Instance.ShowCatchScene(true);
-            Destroy(this.gameObject);
+            ChangeSceneManager.nextViewName = "CatchScene";
+            UnityEngine.SceneManagement.SceneManager.LoadScene("LoadScene");
         }
 
     }

@@ -15,7 +15,7 @@ public class CatchSceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SpawnNewBall();
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class CatchSceneController : MonoBehaviour
     }
     public void SpawnNewBall()
     {
-        print("new ball");
+        //print("new ball");
         GameObject newBall = Instantiate(catchBall);
         newBall.transform.SetParent(catchBallPosition);
         newBall.GetComponent<CatchBallSetting>().SetReferenceCamera(SceneCamera);

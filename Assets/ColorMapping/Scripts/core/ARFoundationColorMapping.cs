@@ -117,11 +117,11 @@ public class ARFoundationColorMapping : MonoBehaviour
     {
         PlayerPrefs.SetInt("w", targetTexture.width);
         PlayerPrefs.SetInt("h", targetTexture.height);
-        //print("w = " + colTexture.width);
-        //print("h = " + colTexture.height);
+
         byte[] textureByte = targetTexture.EncodeToPNG();
         string base64Texture = System.Convert.ToBase64String(textureByte);
         PlayerPrefs.SetString("colored", base64Texture);
+        PlayerPrefs.SetInt("colorOK", 1);
         PlayerPrefs.Save();
     }
     /// <summary>
