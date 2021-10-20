@@ -16,19 +16,43 @@ public class WallClickDetector : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (hit.collider.name.Equals("FrontDetect"))
+                if (CameraController.Instance.GetNowIndex() == 0)
                 {
-                    CameraController.Instance.ChangePosition(1);
+                    if (hit.collider.name.Equals("FrontDetect"))
+                    {
+                        CameraController.Instance.ChangePosition(1);
+                    }
+                    else if (hit.collider.name.Equals("LeftDetect"))
+                    {
+                        CameraController.Instance.ChangePosition(2);
+                    }
+                    else if (hit.collider.name.Equals("RightDetect"))
+                    {
+                        CameraController.Instance.ChangePosition(3);
+                    }
+                    else if (hit.collider.name.Equals("DeskDetect"))
+                    {
+                        CameraController.Instance.ChangePosition(4);
+                    }
                 }
-                else if (hit.collider.name.Equals("LeftDetect"))
+                else
                 {
-                    CameraController.Instance.ChangePosition(2);
+                    if (hit.collider.name.Equals("ColoringDo"))
+                    {
+                        ChangeSceneManager.SetNextViewName("ARFoundationColoring");
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("LoadScene");
+                    }
+                    else if (hit.collider.name.Equals("GPSDo"))
+                    {
+                        ChangeSceneManager.SetNextViewName("goMapLocation");
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("LoadScene");
+                    }
+                    else if (hit.collider.name.Equals("ProjectionDo"))
+                    {
+                        
+                    }
                 }
-                else if (hit.collider.name.Equals("RightDetect"))
-                {
-                    CameraController.Instance.ChangePosition(3);
-                }
-                //print(hit.collider.name);
+                print(hit.collider.name);
             }
         }
     }

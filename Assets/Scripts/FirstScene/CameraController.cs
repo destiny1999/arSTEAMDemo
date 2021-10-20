@@ -13,6 +13,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] float speed = 5f;
     [SerializeField] float rotateSpeed = 360f;
     [SerializeField] GameObject BackToMain = null;
+    [SerializeField] GameObject DetectObjects = null;
     [SerializeField] List<GameObject> itemsList = new List<GameObject>();
     public static CameraController Instance;
     int nowIndex = 0;
@@ -32,6 +33,11 @@ public class CameraController : MonoBehaviour
         {
             itemsList[nowIndex].SetActive(false);
             BackToMain.SetActive(false);
+            DetectObjects.SetActive(true);
+        }
+        else
+        {
+            DetectObjects.SetActive(false);
         }
         if(targetIndex != nowIndex)
         {
@@ -66,5 +72,9 @@ public class CameraController : MonoBehaviour
             BackToMain.SetActive(true);
             itemsList[nowIndex].SetActive(true);
         }
+    }
+    public int GetNowIndex()
+    {
+        return nowIndex;
     }
 }
