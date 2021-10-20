@@ -15,6 +15,8 @@ public class CameraController : MonoBehaviour
     [SerializeField] GameObject BackToMain = null;
     [SerializeField] GameObject DetectObjects = null;
     [SerializeField] List<GameObject> itemsList = new List<GameObject>();
+    [SerializeField] GameObject ProejctionTarget = null;
+    [SerializeField] GameObject ProjectionObjects = null;
     public static CameraController Instance;
     int nowIndex = 0;
     private void Awake()
@@ -25,7 +27,14 @@ public class CameraController : MonoBehaviour
     {
 
     }
-
+    public void ChangeToProjection(bool status)
+    {
+        BackToMain.SetActive(!status);
+        itemsList[nowIndex].SetActive(!status);
+        ProejctionTarget.SetActive(status);
+        ProjectionObjects.SetActive(status);
+    }
+    
     // Update is called once per frame
     public void ChangePosition(int targetIndex)
     {

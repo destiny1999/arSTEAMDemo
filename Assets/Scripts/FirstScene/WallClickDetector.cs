@@ -49,10 +49,10 @@ public class WallClickDetector : MonoBehaviour
                     }
                     else if (hit.collider.name.Equals("ProjectionDo"))
                     {
-                        
+                        CameraController.Instance.ChangeToProjection(true);
                     }
                 }
-                print(hit.collider.name);
+                //print(hit.collider.name);
             }
         }
     }

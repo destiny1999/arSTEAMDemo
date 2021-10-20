@@ -124,16 +124,17 @@ public class VoiceOrderController : MonoBehaviour
             yield break;
         }
         Vector3 cameraVector = MainCamera.transform.position;
-        float targetZ = MainCamera.transform.position.z + direction;
+        float targetX = MainCamera.transform.position.x + direction;
 
-        while ( Mathf.Abs(MainCamera.transform.position.z - targetZ) > 0.1 )
+        while ( Mathf.Abs(MainCamera.transform.position.x - targetX) > 0.1f )
         {
+            print(Mathf.Abs(MainCamera.transform.position.x - targetX));
             changeFinished = false;
 
             MainCamera.transform.Translate(Vector3.forward * direction * Time.deltaTime);
             yield return 1;
         }
-        MainCamera.transform.position = new Vector3(cameraVector.x, cameraVector.y, targetZ);
+        MainCamera.transform.position = new Vector3(targetX, cameraVector.y, cameraVector.z);
         changeFinished = true;
     }
     
